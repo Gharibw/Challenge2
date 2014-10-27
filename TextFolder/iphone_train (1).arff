@@ -1,0 +1,202 @@
+% 1. Title: iPhone6TweetsSentimentAnalysisDTree
+% 
+% 2. Teams: Bruno, Gharib, Rishabh, Sravan
+% 
+% 3. Number of Instances: 22
+% 
+% 4. Number of Attributes: 4
+% 
+% 5. Attribute Information:
+%     -- 2 Classes
+%      1 : the tweeter likes iphone6/iphone6plus,
+%      2 : the tweeter dislikes iphone6/iphone6plus.
+% 
+%     1. type of device: (1) iphone6, (2) iphone6plus
+%     2. color of device: (1)  gold, (2) gray, (3) silver, 
+%     3. storage capacity of device (Gigabytes): (1)  16, (2) 64, (3) 128
+%     4. mobile service carrier:  (1) AT&T, (2) Verizon, (3) T-Mobile
+% 
+% 6. Number of Missing Attribute Values:   0
+% 
+% 7. Class Distribution:
+%    1. like: 16
+%    2. dislike: 6
+
+@RELATION iPhone6
+ 
+@ATTRIBUTE type {iphone6, iphone6plus}
+@ATTRIBUTE color {gold, silver, gray}
+@ATTRIBUTE capacity Numeric
+@ATTRIBUTE Carrier {ATT, T-Mobile, Verizon, Sprint}
+@ATTRIBUTE class {like, dislike}
+
+@DATA
+iphone6,gold,64,ATT,like
+iphone6plus,gold,16,ATT,dislike
+iphone6plus,gray,16,?,like
+iphone6plus,gray,128,ATT,like
+iphone6plus,gold,128,?,like
+iphone6,gold,128,?,like
+iphone6plus,silver,16,?,dislike
+iphone6plus,gold,64,Verizon,like
+iphone6,gold,128,Verizon,like
+iphone6plus,gold,64,Verizon,like
+iphone6plus,gold,16,Verizon,dislike
+iphone6plus,?,16,?,dislike
+iphone6,gold,128,?,like
+iphone6plus,gold,128,T-Mobile,like
+iphone6,?,128,T-Mobile,dislike
+iphone6,gold,128,?,like
+iphone6,gray,64,ATT,like
+iphone6,gold,64,?,like
+iphone6,gold,128,?,like
+iphone6plus,gold,128,?,like
+iphone6,?,128,T-Mobile,dislike
+iphone6,gold,128,?,dislike
+iphone6,gray,64,ATT,like
+iphone6plus,silver,64,?,like
+iphone6,silver,?,?,like
+iphone6plus,gold,?,?,dislike
+iphone6plus,gold,64,ATT,like
+iphone6plus,gold,16,ATT,dislike
+iphone6,gold,64,ATT,like
+iphone6,gold,16,ATT,dislike
+iphone6,gray,16,?,like
+iphone6plus,gray,128,ATT,dislike
+iphone6plus,gold,128,?,dislike
+iphone6,gold,128,?,like
+iphone6plus,silver,?,?,dislike
+iphone6,gold,128,?,dislike
+iphone6plus,gold,64,?,like
+iphone6plus,gold,16,?,like
+iphone6plus,?,16,?,dislike
+iphone6,gold,128,?,like
+iphone6,gold,128,?,like
+iphone6plus,gold,64,?,like
+iphone6plus,gold,16,?,dislike
+iphone6plus,?,16,?,dislike
+iphone6,gold,128,?,like
+iphone6plus,gold,128,T-Mobile,like
+iphone6,?,128,?,dislike
+iphone6plus,silver,64,?,like
+iphone6plus,silver,16,?,dislike
+iphone6plus,gold,64,?,dislike
+iphone6,silver,?,?,dislike
+iphone6plus,gold,?,?,dislike
+iphone6plus,gold,64,ATT,like
+iphone6plus,gold,16,ATT,like
+iphone6,gold,32,ATT,like
+iphone6plus,gold,64,ATT,like
+iphone6plus,gray,16,?,dislike
+iphone6plus,gray,128,ATT,like
+iphone6plus,gold,128,?,dislike
+iphone6,gold,128,?,like
+iphone6plus,silver,16,?,dislike
+iphone6plus,gold,64,?,like
+iphone6,silver,?,?,like
+iphone6plus,gold,?,?,like
+iphone6plus,gold,64,?,like
+iphone6plus,gold,16,?,dislike
+iphone6,gold,64,ATT,like
+iphone6plus,gold,16,ATT,dislike
+iphone6plus,gray,16,?,like
+iphone6,gray,32,ATT,like
+iphone6,gold,128,?,like
+iphone6,gray,64,ATT,like
+iphone6plus,silver,64,?,like
+iphone6plus,gold,64,Verizon,dislike
+iphone6,gold,128,Verizon,dislike
+iphone6plus,gold,?,Verizon,like
+iphone6plus,gold,16,?,dislike
+iphone6plus,?,16,?,dislike
+iphone6plus,gold,128,?,like
+iphone6,gold,128,T-Mobile,like
+iphone6plus,?,128,T-Mobile,dislike
+iphone6,gold,128,?,like
+iphone6,gray,64,?,like
+iphone6plus,silver,?,?,like
+iphone6,silver,?,?,like
+iphone6plus,gold,?,?,dislike
+iphone6plus,gold,64,ATT,dislike
+iphone6plus,gold,16,ATT,like
+iphone6,gold,64,ATT,dislike
+iphone6plus,gold,32,ATT,dislike
+iphone6plus,gold,16,?,dislike
+iphone6plus,?,16,?,like
+iphone6,gold,128,?,dislike
+iphone6plus,gold,128,T-Mobile,like
+iphone6,?,128,?,dislike
+iphone6,gold,128,?,dislike
+iphone6,gray,64,ATT,dislike
+iphone6plus,gray,16,?,like
+iphone6plus,gray,128,?,like
+iphone6plus,gold,128,?,dislike
+iphone6,gold,128,?,dislike
+iphone6plus,silver,16,?,like
+iphone6plus,gold,64,?,like
+iphone6,gold,128,?,like
+iphone6plus,gold,64,?,like
+iphone6plus,silver,64,?,dislike
+iphone6,silver,?,?,like
+iphone6plus,gold,?,?,like
+iphone6plus,gold,?,ATT,like
+iphone6plus,gold,?,?,dislike
+iphone6plus,gold,?,?,dislike
+iphone6plus,gold,?,ATT,like
+iphone6plus,gold,?,ATT,like
+iphone6,gold,32,?,like
+iphone6plus,gold,64,?,like
+iphone6,gray,16,?,dislike
+iphone6,gray,128,ATT,like
+iphone6,gold,?,?,dislike
+iphone6,gold,?,?,like
+iphone6,silver,16,?,dislike
+iphone6,gold,64,?,like
+iphone6plus,silver,?,?,like
+iphone6plus,gold,?,?,like
+iphone6plus,gold,?,?,like
+iphone6plus,silver,16,?,dislike
+iphone6,gold,64,?,like
+iphone6plus,gold,16,?,dislike
+iphone6plus,gray,16,?,like
+iphone6,gray,32,?,like
+iphone6,gold,128,?,like
+iphone6,gray,64,ATT,like
+iphone6plus,silver,?,?,like
+iphone6plus,gold,64,?,dislike
+iphone6,gold,128,?,dislike
+iphone6plus,gold,?,Verizon,like
+iphone6,gold,16,?,dislike
+iphone6,?,16,?,dislike
+iphone6,gold,128,?,like
+iphone6plus,gold,?,T-Mobile,like
+iphone6plus,?,128,T-Mobile,dislike
+iphone6plus,gold,128,?,like
+iphone6,gray,64,?,like
+iphone6plus,silver,?,?,like
+iphone6,silver,?,?,like
+iphone6plus,gold,?,?,dislike
+iphone6,gold,?,ATT,dislike
+iphone6plus,gold,?,ATT,like
+iphone6,gold,?,ATT,dislike
+iphone6plus,?,32,ATT,dislike
+iphone6plus,?,16,?,dislike
+iphone6plus,?,16,?,like
+iphone6,gold,?,?,dislike
+iphone6plus,gold,128,T-Mobile,like
+iphone6plus,?,128,?,dislike
+iphone6plus,gold,128,?,dislike
+iphone6plus,gray,64,ATT,dislike
+iphone6,gray,16,?,like
+iphone6plus,gray,?,?,like
+iphone6plus,gold,?,?,dislike
+iphone6,gold,?,?,dislike
+iphone6plus,silver,?,?,like
+iphone6plus,gold,?,?,like
+iphone6,gold,?,?,like
+iphone6plus,gold,?,?,like
+iphone6,silver,64,?,dislike
+iphone6plus,silver,?,?,like
+iphone6,gold,?,?,like
+iphone6,gold,?,ATT,like
+iphone6,gold,?,?,dislike

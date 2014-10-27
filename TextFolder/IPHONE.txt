@@ -1,0 +1,15 @@
+{"tweets":[
+{"id":525399576417935361, "text":"Why didn't I get an invite? “@MTNza: We have another spot prize winner at the #iPhone6 & #iPhone6Plus launch! 35 min away from the re"},
+{"id":525397563613409280, "text":"RT @MTNza: 45 minutes to go until we get to see the #iPhone6 & #iPhone6Plus! We're super excited! RT if you want one now!"},
+{"id":525397679019663361, "text":"Looking to purchase new phone. What's better - #iPhone6 or #SamsungGalaxyS5?"},
+{"id":525397681943105536, "text":"Got my phone upgraded! #iphone6"},
+{"id":525397717519171584, "text":"@MTNza  I can't wait #iPhone6 so excited"},
+{"id":525398190372450305, "text":"RT @TechSmartMag: Still awake? The iPhone 6 and 6 Plus will be launching tonight on @MTNza. #iPhone6 #iPhone6Plus"},
+{"id":525399563730169859, "text":"Dropped my baby once #iphone6 slightly no cracks will make sure it does happen again baby !"},
+{"id":525399629442338936, "text":"Trying out my new phone #iphone6"},
+{"id":525399629442337316, "text":"Best iPhone ever #iphone6"},
+{"id":525399294321338816, "text":"#Bendgate #iphone6, New iPhone sucks, don't buy'em peeps"},
+{"id":525399621242338816, "text":"Produting camera? Ah! Steve Jobs wouldn't have released this #iphone6"},
+{"id":525399631232338816, "text":"#iphone6 is a beast, It creates all the smartphones in geekbench"},
+{"id":525334322342338816, "text":"Hi! need an #iphone6 free cover? Subscribe to our website "}
+]}
